@@ -1,5 +1,5 @@
 <host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
-    android:description="@string/servicedesc"
+    android:description="HCE service"
     android:requireDeviceUnlock="false">
     <aid-group android:description="@string/aiddescription"
         android:category="other">
