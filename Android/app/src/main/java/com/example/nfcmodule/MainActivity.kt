@@ -12,7 +12,9 @@ class MyHostApduService : HostApduService() {
 
     override fun processCommandApdu(commandApdu: ByteArray, extras: Bundle?): ByteArray {
         if(commandApdu != null) {
-            
+            // TODO Send to main core yes! I've connected!
+            // TODO Return Worker ID to Reader
+            // Kind of initialization handshake
         }
     }
 
