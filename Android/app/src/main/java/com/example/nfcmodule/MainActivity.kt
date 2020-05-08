@@ -1,6 +1,5 @@
 package com.example.nfcmodule
 
-
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +11,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MyHostApduService : HostApduService() {
 
     override fun processCommandApdu(commandApdu: ByteArray, extras: Bundle?): ByteArray {
-
+        if(commandApdu != null) {
+            
+        }
     }
 
     override fun onDeactivated(reason: Int) {
