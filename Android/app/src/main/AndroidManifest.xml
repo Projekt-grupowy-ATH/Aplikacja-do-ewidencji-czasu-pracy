@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service android:name=".MyHostApduService" android:exported="true"
+
+        <!-- HCE service -->
+        <service android:name="ApduService" android:exported="true"
             android:permission="android.permission.BIND_NFC_SERVICE">
             <intent-filter>
                 <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE"/>

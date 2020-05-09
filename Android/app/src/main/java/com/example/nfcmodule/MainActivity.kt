@@ -8,19 +8,7 @@ import android.view.MenuItem
 import android.nfc.cardemulation.HostApduService
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MyHostApduService : HostApduService() {
 
-    override fun processCommandApdu(commandApdu: ByteArray, extras: Bundle?): ByteArray {
-        val UserID: String = "1234532"
-        // Bellow employer ID for remote device
-        var response: ByteArray = UserID.toByteArray()
-        return response
-    }
-
-    override fun onDeactivated(reason: Int) {
-
-    }
-}
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
