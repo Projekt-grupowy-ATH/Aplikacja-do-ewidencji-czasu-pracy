@@ -11,12 +11,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MyHostApduService : HostApduService() {
 
     override fun processCommandApdu(commandApdu: ByteArray, extras: Bundle?): ByteArray {
-        if(commandApdu != null) {
-            // Bellow employer ID for remote device
-            val UserID: String = "1234532"
-            var response: ByteArray = UserID.toByteArray()
-            return  response
-        }
+        val UserID: String = "1234532"
+        // Bellow employer ID for remote device
+        var response: ByteArray = UserID.toByteArray()
+        return response
     }
 
     override fun onDeactivated(reason: Int) {
