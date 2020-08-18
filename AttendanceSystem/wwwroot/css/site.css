@@ -64,9 +64,10 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-color: lightseagreen;
-    height:100%;
-    width:100%;
+    /*background-color: lightseagreen;*/
+    background-image: url("https://4.bp.blogspot.com/-FI8LE3KC1H8/WDvw2uR0rKI/AAAAAAAAAMw/YDI8HnCXIB0kAED48pTMrjJh3sSZksTbgCLcB/s1600/Project%2BManagement%2B-%2Bfreewallpaperimage.xyz%2B.jpg");
+    height: 100%;
+    width: 100%;
 }
 .footer {
   position: absolute;
@@ -125,10 +126,24 @@ body {
     position: absolute;
     line-height: 250px;
 }
+
 .block:hover{
     z-index:100;
     animation:scale 0.4s linear;
     animation-fill-mode:forwards;
+    transform-origin:50% 50%;
 
+}
+@keyframes scale{
+    0%{
+        -webkit-transform: scale(1);
+        transform:scale(1);
+
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        transform: scale();
+        box-shadow: 10px 10px 60px 10px #888888;
+    }
 }
 
