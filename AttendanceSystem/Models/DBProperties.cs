@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace AttendanceSystem.Models
 {
-    public class DBProperties
+    public class Users
     {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Job { get; set; }
+        public string TypeOfUser { get; set; }
     }
+
 }
