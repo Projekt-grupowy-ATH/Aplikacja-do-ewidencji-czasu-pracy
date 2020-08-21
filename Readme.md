@@ -1,3 +1,4 @@
+#################################################### DOCKER ############################################################
 # PREREQUIREMENTS:
 # - Docker Windows
 # - Shared dir for volume(to set in settings) for instance:
@@ -28,5 +29,8 @@ mssql@7ee18f1e91fe:/opt/mssql-tools/bin$ ./sqlcmd -S localhost -U SA -P "Passwor
 # Scritps execution SQLcmd
 mssql@7ee18f1e91fe:/opt/mssql-tools/bin$ ./sqlcmd -S localhost -U SA -P "Password1!" -i /var/opt/mssql/SQLQuery1.sql
 
+####################################################### DB ##############################################################
 # Scaffolding sytax
-PM> Scaffold-DbContext "Server=127.0.0.1,1433;Database=Ewidencja3;User ID=sa;Password=Password1!;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+PM> Scaffold-DbContext "Server=127.0.0.1,1433;Database=Ewidencja;User ID=sa;Password=Password1!;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+# DB connection string in C#
