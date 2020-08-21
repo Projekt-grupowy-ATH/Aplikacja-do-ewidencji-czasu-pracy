@@ -728,3 +728,6 @@ C:\Users\M6800\source\repos\ewidencja\Aplikacja-do-ewidencji-czasu-pracy\Attenda
 C:\Users\M6800\source\repos\ewidencja\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\M6800\source\repos\ewidencja\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\M6800\source\repos\ewidencja\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\M6800\source\repos\ewidencja\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\AttendanceSystem.csproj.CoreCompileInputs.cache
+C:\Users\M6800\source\repos\ewidencja\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\AttendanceSystem.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\M6800\source\repos\ewidencja\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\AttendanceSystem.MvcApplicationPartsAssemblyInfo.cache
