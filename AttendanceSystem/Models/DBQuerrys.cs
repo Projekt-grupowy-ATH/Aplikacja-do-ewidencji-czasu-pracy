@@ -22,11 +22,10 @@ namespace AttendanceSystem.Models
                     ID = element.Idpracownika
                 }).ToList();
         }
-
+        
         public void AddNewEmployee(string name, string surname, string job, string permission, int PhoneNumber)
         {
-            List<Pracownik> NewEmployee = new List<Pracownik>()
-            {
+            List<Pracownik> NewEmployee = new List<Pracownik>(){
             new Pracownik(){
                 Imie = name,
                 Nazwisko = surname,
@@ -36,6 +35,29 @@ namespace AttendanceSystem.Models
             }};
 
             _connection.Pracownik.AddRange(NewEmployee);
+            _connection.SaveChanges();
+        }
+
+        public void AddNewProject(string projectTitle)
+        {
+            List<Projekt> NewProject = new List<Projekt>(){
+                new Projekt(){ 
+                    NazwaProjektu = projectTitle
+                }};
+            _connection.Projekt.AddRange(NewProject);
+            _connection.SaveChanges();
+        }
+
+        public void AddNewTaskToProject(string projectTitle, string taskTitle)
+        {
+            var _projectID = _connection.Projekt.Where(s => s.NazwaProjektu == projectTitle).Select(s => s.Idprojektu).FirstOrDefault();
+
+            List<Zadanie> NewTask = new List<Zadanie>(){
+                new Zadanie(){
+                    NazwaZadania = taskTitle,
+                    Idprojektu = _projectID
+                }};
+            _connection.Zadanie.AddRange(NewTask);
             _connection.SaveChanges();
         }
     }
