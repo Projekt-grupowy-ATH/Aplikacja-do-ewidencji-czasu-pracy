@@ -9,7 +9,7 @@ namespace AttendanceSystem.Models
     {
         readonly EwidencjaContext _connection; 
         
-        DBQuerrys()
+        public DBQuerrys()
         {
             _connection = new EwidencjaContext(); 
         }
