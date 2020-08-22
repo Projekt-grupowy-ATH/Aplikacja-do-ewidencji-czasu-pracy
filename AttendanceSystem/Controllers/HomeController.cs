@@ -20,9 +20,6 @@ namespace AttendanceSystem.Controllers
 
         public IActionResult Index()
         {
-            DBQuerrys a = new DBQuerrys();
-            a.AddNewProject("R&D");
-            a.AddNewTaskToProject("R&D", "Meeting");
             return View();
         }
 
