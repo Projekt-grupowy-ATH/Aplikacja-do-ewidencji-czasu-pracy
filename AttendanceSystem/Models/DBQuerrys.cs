@@ -13,14 +13,18 @@ namespace AttendanceSystem.Models
         {
             _connection = new EwidencjaContext(); 
         }
-        public void ShowUsersList()
+        public IEnumerable<EmployeeView> ShowUsersList()
         {
+            List<EmployeeView> employeeList = new List<EmployeeView>();
+
                 var item = (from element in _connection.Pracownik
-                select new{
-                    name = element.Imie,
-                    surname = element.Nazwisko,
-                    ID = element.Idpracownika
+                select new EmployeeView{
+                    Imie = element.Imie,
+                    Nazwisko = element.Nazwisko
                 }).ToList();
+
+
+            return item;
         }
         
         public void AddNewEmployee(string name, string surname, string job, string permission, int PhoneNumber)
