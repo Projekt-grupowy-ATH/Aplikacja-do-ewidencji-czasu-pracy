@@ -23,6 +23,20 @@ namespace AttendanceSystem.Models
                 }).ToList();
         }
 
+        public void AddNewEmployee(string name, string surname, string job, string permission, int PhoneNumber)
+        {
+            List<Pracownik> NewEmployee = new List<Pracownik>()
+            {
+            new Pracownik(){
+                Imie = name,
+                Nazwisko = surname,
+                Stanowisko = job,
+                Uprawnienia = permission,
+                Telefon = PhoneNumber
+            }};
 
+            _connection.Pracownik.AddRange(NewEmployee);
+            _connection.SaveChanges();
+        }
     }
 }

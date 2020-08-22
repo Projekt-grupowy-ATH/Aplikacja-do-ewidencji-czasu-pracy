@@ -34,3 +34,7 @@ mssql@7ee18f1e91fe:/opt/mssql-tools/bin$ ./sqlcmd -S localhost -U SA -P "Passwor
 PM> Scaffold-DbContext "Server=127.0.0.1,1433;Database=Ewidencja;User ID=sa;Password=Password1!;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
 # DB connection string in C#
+
+"Server=127.0.0.1,1433;Database=Ewidencja;User ID=sa;Password=Password1!;"
+
+# DB querrys has been defined in model/DBQuerrys.cs
