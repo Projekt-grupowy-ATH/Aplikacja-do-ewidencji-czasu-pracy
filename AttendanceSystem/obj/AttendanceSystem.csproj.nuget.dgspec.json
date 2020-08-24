@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\M6800\\source\\repos\\ewidencja\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj": {}
+    "C:\\Users\\Dell\\Desktop\\Development\\AttendanceSystem\\AttendanceSystem\\AttendanceSystem\\AttendanceSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\M6800\\source\\repos\\ewidencja\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj": {
+    "C:\\Users\\Dell\\Desktop\\Development\\AttendanceSystem\\AttendanceSystem\\AttendanceSystem\\AttendanceSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\M6800\\source\\repos\\ewidencja\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\Development\\AttendanceSystem\\AttendanceSystem\\AttendanceSystem\\AttendanceSystem.csproj",
         "projectName": "AttendanceSystem",
-        "projectPath": "C:\\Users\\M6800\\source\\repos\\ewidencja\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
-        "packagesPath": "C:\\Users\\M6800\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\M6800\\source\\repos\\ewidencja\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\Desktop\\Development\\AttendanceSystem\\AttendanceSystem\\AttendanceSystem\\AttendanceSystem.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\Desktop\\Development\\AttendanceSystem\\AttendanceSystem\\AttendanceSystem\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\M6800\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
