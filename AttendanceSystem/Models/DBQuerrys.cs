@@ -27,7 +27,7 @@ namespace AttendanceSystem.Models
             return item;
         }
         
-        public void AddNewEmployee(string name, string surname, string job, string permission, int PhoneNumber)
+        public void AddNewEmployee(string name, string surname, string job, string permission, int phoneNumber)
         {
             List<Pracownik> NewEmployee = new List<Pracownik>(){
             new Pracownik(){
@@ -35,7 +35,7 @@ namespace AttendanceSystem.Models
                 Nazwisko = surname,
                 Stanowisko = job,
                 Uprawnienia = permission,
-                Telefon = PhoneNumber
+                Telefon = phoneNumber
             }};
 
             _connection.Pracownik.AddRange(NewEmployee);
