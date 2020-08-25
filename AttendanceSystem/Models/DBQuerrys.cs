@@ -65,9 +65,5 @@ namespace AttendanceSystem.Models
             _connection.SaveChanges();
         }
 
-        public void UpdateEmployee()
-        {
-
-        }
     }
 }
