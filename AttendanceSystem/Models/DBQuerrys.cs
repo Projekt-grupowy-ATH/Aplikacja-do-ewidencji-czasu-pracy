@@ -64,5 +64,10 @@ namespace AttendanceSystem.Models
             _connection.Zadanie.AddRange(NewTask);
             _connection.SaveChanges();
         }
+
+        public void UpdateEmployee()
+        {
+
+        }
     }
 }
