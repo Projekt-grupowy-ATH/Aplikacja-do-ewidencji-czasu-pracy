@@ -5,28 +5,15 @@ using System.Threading.Tasks;
 
 namespace AttendanceSystem.Models
 {
-    public class DBQuerrys
+    public class DBCreateQuerrys
     {
         readonly EwidencjaContext _connection; 
         
-        public DBQuerrys()
+        public DBCreateQuerrys()
         {
             _connection = new EwidencjaContext(); 
         }
-        public IEnumerable<EmployeeView> ShowUsersList()
-        {
-            List<EmployeeView> employeeList = new List<EmployeeView>();
-
-                var item = (from element in _connection.Pracownik
-                select new EmployeeView{
-                    Imie = element.Imie,
-                    Nazwisko = element.Nazwisko
-                }).ToList();
-
-
-            return item;
-        }
-        
+               
         public void AddNewEmployee(string name, string surname, string job, string permission, int phoneNumber)
         {
             List<Pracownik> NewEmployee = new List<Pracownik>(){
