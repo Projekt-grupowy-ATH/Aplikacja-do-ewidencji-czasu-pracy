@@ -19,6 +19,7 @@ namespace AttendanceSystem.Models
 
                 var item = (from element in _connection.Pracownik
                 select new EmployeeView{
+                    Idpracownika = element.Idpracownika,
                     Imie = element.Imie,
                     Nazwisko = element.Nazwisko,
                     Stanowisko = element.Stanowisko,
