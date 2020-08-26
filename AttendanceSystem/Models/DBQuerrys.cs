@@ -27,7 +27,7 @@ namespace AttendanceSystem.Models
             return item;
         }
         
-        public void AddNewEmployee(string name, string surname, string job, string permission, int PhoneNumber)
+        public void AddNewEmployee(string name, string surname, string job, string permission, int? PhoneNumber)
         {
             List<Pracownik> NewEmployee = new List<Pracownik>(){
             new Pracownik(){
