@@ -9,5 +9,8 @@ namespace AttendanceSystem.Models
     {
         public string Imie { get; set; }
         public string Nazwisko { get; set; }
+        public string Stanowisko { get; set; }
+        public string Uprawnienia { get; set; }
+        public int? Telefon { get; set; }
     }
 }
