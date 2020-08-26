@@ -19,15 +19,19 @@ namespace AttendanceSystem.Models
 
                 var item = (from element in _connection.Pracownik
                 select new EmployeeView{
+                    Idpracownika = element.Idpracownika,
                     Imie = element.Imie,
-                    Nazwisko = element.Nazwisko
+                    Nazwisko = element.Nazwisko,
+                    Stanowisko = element.Stanowisko,
+                    Uprawnienia = element.Uprawnienia,
+                    Telefon = element.Telefon,
                 }).ToList();
 
 
             return item;
         }
         
-        public void AddNewEmployee(string name, string surname, string job, string permission, int PhoneNumber)
+        public void AddNewEmployee(string name, string surname, string job, string permission, int? PhoneNumber)
         {
             List<Pracownik> NewEmployee = new List<Pracownik>(){
             new Pracownik(){
