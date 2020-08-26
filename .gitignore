@@ -9,9 +9,8 @@
 *.user
 *.userosscache
 *.sln.docstates
-*.json
-Startup.cs
-EwidencjaContext.cs
+
+
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
