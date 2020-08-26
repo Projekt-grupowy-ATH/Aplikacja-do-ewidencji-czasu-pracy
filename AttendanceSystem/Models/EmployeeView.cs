@@ -7,6 +7,7 @@ namespace AttendanceSystem.Models
 {
     public class EmployeeView
     {
+        public int Idpracownika { get; set; }
         public string Imie { get; set; }
         public string Nazwisko { get; set; }
         public string Stanowisko { get; set; }
