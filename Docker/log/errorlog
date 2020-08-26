@@ -83,3 +83,7 @@
 2020-08-24 21:47:33.06 spid36s     The Database Mirroring endpoint is in disabled or stopped state.
 2020-08-24 21:47:33.08 spid36s     Service Broker manager has started.
 2020-08-24 21:47:33.08 spid9s      Recovery is complete. This is an informational message only. No user action is required.
+2020-08-26 12:35:31.62 Logon       Error: 18456, Severity: 14, State: 8.
+2020-08-26 12:35:31.62 Logon       Login failed for user 'SA'. Reason: Password did not match that for the login provided. [CLIENT: 172.17.0.4]
+2020-08-26 12:35:57.95 Logon       Error: 18456, Severity: 14, State: 8.
+2020-08-26 12:35:57.95 Logon       Login failed for user 'SA'. Reason: Password did not match that for the login provided. [CLIENT: 172.17.0.4]
