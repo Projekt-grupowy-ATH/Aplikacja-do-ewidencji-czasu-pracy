@@ -15,9 +15,9 @@ namespace AttendanceSystem.Models
         
         public void RemoveEmployee(int id)
         {
-            var RemovalItem = _connection.Pracownik.Where(s => s.Idpracownika == id);
+            var RemovalItem = _connection.Pracownik.Where(s => s.Idpracownika == id).Select(s => s);
 
-            _connection.Remove(RemovalItem);
+            _connection.RemoveRange(RemovalItem);
             _connection.SaveChanges();
         }
 
