@@ -1,10 +1,12 @@
 ﻿using System;
+using AttendanceSystem.Areas.Identity.Data;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace AttendanceSystem.Models
 {
-    public partial class EwidencjaContext : DbContext
+    public partial class EwidencjaContext : IdentityDbContext<AttendanceSystemUser>
     {
         public EwidencjaContext()
         {
@@ -25,12 +27,14 @@ namespace AttendanceSystem.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=127.0.0.1,1433;Database=Ewidencja;User ID=sa;Password=Password1!;");
+                optionsBuilder.UseSqlServer("Server = localhost, 1433; Database = EwidencjaDb; User = sa; Password =< YourNewStrong@Passw0rd >; Trusted_Connection = False; ");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Pracownik>(entity =>
             {
                 entity.HasKey(e => e.Idpracownika)
