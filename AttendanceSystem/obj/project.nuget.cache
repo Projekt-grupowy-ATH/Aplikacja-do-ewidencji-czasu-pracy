@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O4TNvMmvmLLIp7ZWFO0I52KI4gzPU+udNowP/wGxYeHfaSWHGpsIFbQG3r7n5VGnwlxp7QY8DiE0DSSaGKOtyw==",
+  "dgSpecHash": "3jjMyUrQ9arXTQQx4JFyWf58M/TCXUBAtuyknQ+0fsaHNrdCHDzpdqxQYG3T++m1TCRA270J/Ru+PRJwymMm+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\M6800\\source\\repos\\ewidencja\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
+  "projectFilePath": "C:\\Users\\M6800\\source\\repos\\ewidencja1\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\M6800\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.7\\microsoft.aspnetcore.mvc.razor.extensions.3.1.7.nupkg.sha512",
     "C:\\Users\\M6800\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\3.1.7\\microsoft.aspnetcore.mvc.razor.runtimecompilation.3.1.7.nupkg.sha512",

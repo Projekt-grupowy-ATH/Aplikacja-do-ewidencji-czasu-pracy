@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\M6800\\source\\repos\\ewidencja\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj": {}
+    "C:\\Users\\M6800\\source\\repos\\ewidencja1\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\M6800\\source\\repos\\ewidencja\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj": {
+    "C:\\Users\\M6800\\source\\repos\\ewidencja1\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\M6800\\source\\repos\\ewidencja\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
+        "projectUniqueName": "C:\\Users\\M6800\\source\\repos\\ewidencja1\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
         "projectName": "AttendanceSystem",
-        "projectPath": "C:\\Users\\M6800\\source\\repos\\ewidencja\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
+        "projectPath": "C:\\Users\\M6800\\source\\repos\\ewidencja1\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
         "packagesPath": "C:\\Users\\M6800\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\M6800\\source\\repos\\ewidencja\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\obj\\",
+        "outputPath": "C:\\Users\\M6800\\source\\repos\\ewidencja1\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
