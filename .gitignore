@@ -360,3 +360,36 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+AttendanceSystem/obj/AttendanceSystem.csproj.nuget.dgspec.json
+AttendanceSystem/obj/AttendanceSystem.csproj.nuget.g.props
+AttendanceSystem/obj/Debug/netcoreapp3.1/AttendanceSystem.assets.cache
+AttendanceSystem/obj/project.assets.json
+.vs/AttendanceSystem/config/applicationhost.config
+.vs/AttendanceSystem/v16/.suo
+AttendanceSystem/AttendanceSystem.csproj.user
+AttendanceSystem/bin/Debug/netcoreapp3.1/AttendanceSystem.dll
+AttendanceSystem/bin/Debug/netcoreapp3.1/AttendanceSystem.pdb
+AttendanceSystem/bin/Debug/netcoreapp3.1/AttendanceSystem.runtimeconfig.dev.json
+AttendanceSystem/bin/Debug/netcoreapp3.1/AttendanceSystem.StaticWebAssets.xml
+AttendanceSystem/bin/Debug/netcoreapp3.1/AttendanceSystem.Views.dll
+AttendanceSystem/bin/Debug/netcoreapp3.1/AttendanceSystem.Views.pdb
+AttendanceSystem/obj/Debug/netcoreapp3.1/AttendanceSystem.csproj.CoreCompileInputs.cache
+AttendanceSystem/obj/Debug/netcoreapp3.1/AttendanceSystem.csproj.FileListAbsolute.txt
+AttendanceSystem/obj/Debug/netcoreapp3.1/AttendanceSystem.dll
+AttendanceSystem/obj/Debug/netcoreapp3.1/AttendanceSystem.pdb
+AttendanceSystem/obj/Debug/netcoreapp3.1/AttendanceSystem.Views.dll
+AttendanceSystem/obj/Debug/netcoreapp3.1/AttendanceSystem.Views.pdb
+AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml.g.cs
+AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewImports.cshtml.g.cs
+AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs
+AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/_ViewImports.cshtml.g.cs
+AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Login.cshtml.g.cs
+AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Register.cshtml.g.cs
+AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs
+AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs
+AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+AttendanceSystem/obj/Debug/netcoreapp3.1/staticwebassets/AttendanceSystem.StaticWebAssets.Manifest.cache
+AttendanceSystem/obj/Debug/netcoreapp3.1/staticwebassets/AttendanceSystem.StaticWebAssets.xml
+.vs/AttendanceSystem/v16/.suo
+.vs/AttendanceSystem/v16/.suo

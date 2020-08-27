@@ -14,7 +14,7 @@ namespace AttendanceSystem.Models
             _connection = new EwidencjaContext(); 
         }
                
-        public void AddNewEmployee(string name, string surname, string job, string permission, int phoneNumber)
+        public void AddNewEmployee(string name, string surname, string job, string permission, int? phoneNumber)
         {
             List<Pracownik> NewEmployee = new List<Pracownik>(){
             new Pracownik(){
