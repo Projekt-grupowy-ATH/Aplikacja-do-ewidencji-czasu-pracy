@@ -15,4 +15,4 @@ namespace AttendanceSystem.Models
         public int? Telefon { get; set; }
     }
 }
-}
+

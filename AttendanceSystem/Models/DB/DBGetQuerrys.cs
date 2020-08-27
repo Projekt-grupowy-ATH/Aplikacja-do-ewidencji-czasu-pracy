@@ -18,8 +18,12 @@ namespace AttendanceSystem.Models.DB
 
             var item = (from element in _connection.Pracownik
             select new EmployeeView{
+                Idpracownika = element.Idpracownika,
                 Imie = element.Imie,
-                Nazwisko = element.Nazwisko
+                Nazwisko = element.Nazwisko,
+                Stanowisko = element.Stanowisko,
+                Uprawnienia = element.Uprawnienia,
+                Telefon = element.Telefon,
             }).ToList();
 
             return item;
