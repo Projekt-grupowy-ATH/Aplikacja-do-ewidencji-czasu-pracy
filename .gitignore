@@ -391,3 +391,4 @@ AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml
 AttendanceSystem/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 AttendanceSystem/obj/Debug/netcoreapp3.1/staticwebassets/AttendanceSystem.StaticWebAssets.Manifest.cache
 AttendanceSystem/obj/Debug/netcoreapp3.1/staticwebassets/AttendanceSystem.StaticWebAssets.xml
+.vs/AttendanceSystem/v16/.suo
