@@ -360,3 +360,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+AttendanceSystem/obj/AttendanceSystem.csproj.nuget.dgspec.json
+AttendanceSystem/obj/AttendanceSystem.csproj.nuget.g.props
+AttendanceSystem/obj/Debug/netcoreapp3.1/AttendanceSystem.assets.cache
+AttendanceSystem/obj/project.assets.json
