@@ -50,22 +50,22 @@ namespace AttendanceSystem.Areas.Identity.Pages.Account
         {
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "First Name")]
+            [Display(Name = "Imię")]
             public string FirstName { get; set; }
 
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "Last Name")]
+            [Display(Name = "Nazwisko")]
             public string LastName { get; set; }
 
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "Position")]
+            [Display(Name = "Stanowisko")]
             public string Stanowisko { get; set; }
 
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "Permissions")]
+            [Display(Name = "Uprawnienia")]
             public string Uprawnienia { get; set; }
 
             [Required]
@@ -75,17 +75,17 @@ namespace AttendanceSystem.Areas.Identity.Pages.Account
 
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "Phone Number")]
+            [Display(Name = "Telefon")]
             public int PhoneNumber { get; set; }
 
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Hasło")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
+            [Display(Name = "Potwierdz hasło")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
         }
