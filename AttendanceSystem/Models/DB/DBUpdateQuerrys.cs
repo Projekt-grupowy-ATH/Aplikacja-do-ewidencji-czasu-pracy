@@ -14,7 +14,7 @@ namespace AttendanceSystem.Models
             _connection = new EwidencjaContext(); 
         }
 
-        public void UpdateEpmloyeeData(int Id, string name, string surname, string job, string permission, int phoneNumber)
+        public void UpdateEpmloyeeData(int Id, string name, string surname, string job, string permission, int? phoneNumber)
         {
             List <Pracownik> CurrentSettings = new List<Pracownik>();
 
