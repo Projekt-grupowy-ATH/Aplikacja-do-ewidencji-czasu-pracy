@@ -43,5 +43,11 @@ namespace AttendanceSystem.Controllers
             return View(empList);
         }
 
+        public IActionResult Edit(int? id)
+        {
+
+            return View();
+        }
+
     }
 }
