@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using AttendanceSystem.Models;
+using AttendanceSystem.Controllers;
 
 namespace AttendanceSystem.Areas.Identity.Pages.Account
 {
@@ -47,9 +49,34 @@ namespace AttendanceSystem.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "First Name")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Last Name")]
+            public string LastName { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Position")]
+            public string Stanowisko { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Permissions")]
+            public string Uprawnienia { get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Phone Number")]
+            public int PhoneNumber { get; set; }
 
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
@@ -76,7 +103,16 @@ namespace AttendanceSystem.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = new AttendanceSystemUser { UserName = Input.Email, Email = Input.Email };
+                var employe = new Pracownik
+                {
+                    Imie = Input.FirstName,
+                    Nazwisko = Input.LastName,
+                    Stanowisko = Input.Stanowisko,
+                    Uprawnienia = Input.Uprawnienia,
+                    Telefon = Input.PhoneNumber
+                };
                 var result = await _userManager.CreateAsync(user, Input.Password);
+                
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
