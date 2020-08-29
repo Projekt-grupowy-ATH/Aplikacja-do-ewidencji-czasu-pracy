@@ -12,7 +12,11 @@ namespace AttendanceSystem.Controllers
 {
     public class EmployeeController : Controller
     {
-       
+        private readonly EwidencjaContext _db;
+        public EmployeeController(EwidencjaContext db)
+        {
+            _db = db;
+        }
         
         public IActionResult Index()
         {
