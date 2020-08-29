@@ -49,8 +49,18 @@ namespace AttendanceSystem.Controllers
 
         public IActionResult Edit(int? id)
         {
+            if (id == null)
+            {
+                return NotFound();
 
-            return View();
+            }
+            var employee = _db.Pracownik.Find(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return View(employee);
+            
         }
 
     }
