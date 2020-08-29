@@ -61,6 +61,10 @@ namespace AttendanceSystem.Models
                     .IsRequired()
                     .HasMaxLength(20)
                     .IsUnicode(false);
+                entity.Property(e => e.Email)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Projekt>(entity =>

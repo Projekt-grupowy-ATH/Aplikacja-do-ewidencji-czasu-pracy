@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,7 +15,7 @@ namespace AttendanceSystem.Models
             _connection = new EwidencjaContext(); 
         }
                
-        public void AddNewEmployee(string name, string surname, string job, string permission, int? phoneNumber)
+        public void AddNewEmployee(string name, string surname, string job, string permission, string email, int? phoneNumber)
         {
             List<Pracownik> NewEmployee = new List<Pracownik>(){
             new Pracownik(){
@@ -22,7 +23,8 @@ namespace AttendanceSystem.Models
                 Nazwisko = surname,
                 Stanowisko = job,
                 Uprawnienia = permission,
-                Telefon = phoneNumber
+                Telefon = phoneNumber,
+                Email = email
             }};
 
             _connection.Pracownik.AddRange(NewEmployee);

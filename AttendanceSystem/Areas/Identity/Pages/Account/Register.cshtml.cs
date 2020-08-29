@@ -113,7 +113,7 @@ namespace AttendanceSystem.Areas.Identity.Pages.Account
                 //};
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 DBCreateQuerrys dBCreate = new DBCreateQuerrys();
-                dBCreate.AddNewEmployee(Input.FirstName, Input.LastName, Input.Stanowisko, Input.Uprawnienia, Input.PhoneNumber);
+                dBCreate.AddNewEmployee(Input.FirstName, Input.LastName, Input.Stanowisko, Input.Uprawnienia, Input.Email, Input.PhoneNumber);
 
 
                 if (result.Succeeded)
