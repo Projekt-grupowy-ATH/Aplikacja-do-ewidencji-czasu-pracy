@@ -62,6 +62,17 @@ namespace AttendanceSystem.Controllers
             return View(employee);
             
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Pracownik pracownik,int id)
+        {
+
+                DBUpdateQuerrys db = new DBUpdateQuerrys();
+                db.UpdateEpmloyeeData(id, pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Telefon);
+                return RedirectToAction("AllUsers", "Employee");
+
+
+        }
 
     }
 }
