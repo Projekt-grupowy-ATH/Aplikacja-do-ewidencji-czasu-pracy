@@ -11,7 +11,8 @@
 
 <div class="content">
 
-    <div class="block b1"><a style="color:white;" asp-controller="Employee" asp-action="CreateNew">Dodaj pracownika</a></div>
+    @*<div class="block b1"><a style="color:white;" asp-controller="Employee" asp-action="CreateNew">Dodaj pracownika</a></div>*@
+    <div class="block b1"><a style="color:white;" asp-area="Identity" asp-page="/Account/Register">Dodaj pracownika</a></div>
     <div class="block b2"><a style="color:white;" asp-controller="Employee" asp-action="AllUsers">Lista pracowników</a></div>
     <div class="block b3">Nowy projekt</div>
     <div class="block b4">Zadania </div>

@@ -24,6 +24,7 @@ namespace AttendanceSystem.Models.DB
                 Stanowisko = element.Stanowisko,
                 Uprawnienia = element.Uprawnienia,
                 Telefon = element.Telefon,
+                Email = element.Email
             }).ToList();
 
             return item;

@@ -2066,3 +2066,8 @@ C:\Users\Dell\Desktop\ProjektStudia\Aplikacja-do-ewidencji-czasu-pracy\Attendanc
 C:\Users\Dell\Desktop\ProjektStudia\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\AttendanceSystem.dll
 C:\Users\Dell\Desktop\ProjektStudia\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\AttendanceSystem.pdb
 C:\Users\Dell\Desktop\ProjektStudia\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\AttendanceSystem.genruntimeconfig.cache
+C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Employee\AllUsers.cshtml.g.cs
+C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Employee\CreateNew.cshtml.g.cs
+C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\AttendanceSystem.cshtml.g.cs
+C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CreateAndBacktoListButton.cshtml.g.cs
+C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TableButtonPartial.cshtml.g.cs

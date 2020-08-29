@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using AttendanceSystem.Models;
+using AttendanceSystem.Controllers;
 
 namespace AttendanceSystem.Areas.Identity.Pages.Account
 {
@@ -47,18 +49,43 @@ namespace AttendanceSystem.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Imię")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Nazwisko")]
+            public string LastName { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Stanowisko")]
+            public string Stanowisko { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Uprawnienia")]
+            public string Uprawnienia { get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
             [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Telefon")]
+            public int PhoneNumber { get; set; }
+
+            [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Hasło")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
+            [Display(Name = "Potwierdz hasło")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
         }
@@ -76,7 +103,19 @@ namespace AttendanceSystem.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = new AttendanceSystemUser { UserName = Input.Email, Email = Input.Email };
+                //var employe = new Pracownik
+                //{
+                //    Imie = Input.FirstName,
+                //    Nazwisko = Input.LastName,
+                //    Stanowisko = Input.Stanowisko,
+                //    Uprawnienia = Input.Uprawnienia,
+                //    Telefon = Input.PhoneNumber
+                //};
                 var result = await _userManager.CreateAsync(user, Input.Password);
+                DBCreateQuerrys dBCreate = new DBCreateQuerrys();
+                dBCreate.AddNewEmployee(Input.FirstName, Input.LastName, Input.Stanowisko, Input.Uprawnienia, Input.Email, Input.PhoneNumber);
+
+
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
