@@ -21,7 +21,7 @@ namespace AttendanceSystem.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("EwidencjaDbContext")));
 
-                services.AddDefaultIdentity<AttendanceSystemUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                services.AddDefaultIdentity<AttendanceSystemUser>(options => options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<EwidencjaContext>();
             });
         }

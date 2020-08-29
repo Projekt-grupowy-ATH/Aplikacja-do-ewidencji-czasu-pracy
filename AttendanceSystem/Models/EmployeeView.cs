@@ -13,6 +13,7 @@ namespace AttendanceSystem.Models
         public string Stanowisko { get; set; }
         public string Uprawnienia { get; set; }
         public int? Telefon { get; set; }
+        public string Email { get; set; }
     }
 }
 
