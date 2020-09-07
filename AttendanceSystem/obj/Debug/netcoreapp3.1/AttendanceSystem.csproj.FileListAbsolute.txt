@@ -2071,5 +2071,3 @@ C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSy
 C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Home\AttendanceSystem.cshtml.g.cs
 C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CreateAndBacktoListButton.cshtml.g.cs
 C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TableButtonPartial.cshtml.g.cs
-C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Edit.cshtml.g.cs
-C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_EditAndBackToListButton.cshtml.g.cs

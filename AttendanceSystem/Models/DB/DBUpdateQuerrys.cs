@@ -24,9 +24,7 @@ namespace AttendanceSystem.Models
                 Nazwisko = s.Nazwisko,
                 Stanowisko = s.Stanowisko,
                 Uprawnienia = s.Uprawnienia,
-                Telefon = s.Telefon,
-                Email = s.Email
-                
+                Telefon = s.Telefon
             }).ToList();
 
             CurrentSettings.ForEach(s =>
@@ -36,7 +34,6 @@ namespace AttendanceSystem.Models
                 s.Stanowisko = job;
                 s.Uprawnienia = permission;
                 s.Telefon = phoneNumber;
-                s.Email = s.Email;
             });
 
             _connection.UpdateRange(CurrentSettings);
