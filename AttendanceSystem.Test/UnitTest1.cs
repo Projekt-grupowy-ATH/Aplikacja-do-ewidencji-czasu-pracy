@@ -3,10 +3,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AttendanceSystem.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class EmployeeControllerTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void test()
         {
         }
     }
