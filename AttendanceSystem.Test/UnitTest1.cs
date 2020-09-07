@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
+using AttendanceSystem.Models;
 
 namespace AttendanceSystem.Test
 {
@@ -8,6 +10,7 @@ namespace AttendanceSystem.Test
         [TestMethod]
         public void test()
         {
+            var moqItem = new Mock<EmployeeView>();
         }
     }
 }
