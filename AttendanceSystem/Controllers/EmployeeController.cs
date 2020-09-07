@@ -12,11 +12,7 @@ namespace AttendanceSystem.Controllers
 {
     public class EmployeeController : Controller
     {
-        private readonly EwidencjaContext _db;
-        public EmployeeController(EwidencjaContext db)
-        {
-            _db = db;
-        }
+       
         
         public IActionResult Index()
         {
@@ -45,33 +41,6 @@ namespace AttendanceSystem.Controllers
             DBGetQuerrys db = new DBGetQuerrys();
             var empList=db.ShowUsersList();
             return View(empList);
-        }
-
-        public IActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-
-            }
-            var employee = _db.Pracownik.Find(id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
-            return View(employee);
-            
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(Pracownik pracownik,int id)
-        {
-
-                DBUpdateQuerrys db = new DBUpdateQuerrys();
-                db.UpdateEpmloyeeData(id, pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Telefon);
-                return RedirectToAction("AllUsers", "Employee");
-
-
         }
 
     }
