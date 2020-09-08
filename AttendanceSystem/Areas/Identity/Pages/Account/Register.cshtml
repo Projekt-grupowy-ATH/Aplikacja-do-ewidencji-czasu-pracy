@@ -3,57 +3,105 @@
 @{
     ViewData["Title"] = "Dodaj pracownika";
 }
+<style>
 
-<h1 style="width:600px; margin:0 auto;">@ViewData["Title"]</h1>
 
-<div class="row" style="width:600px; margin:0 auto;">
-    <div class="col">
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <hr />
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Input.Email"></label>
+    .backgroundWhiteBorder {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        border: 1px solid #ddd;
+        width: 70%;
+        margin: 0 auto;
+    }
+</style>
+
+
+<br />
+<div class="backgroundWhiteBorder">
+
+    <h1 style="text-align:center; margin:0 auto;">@ViewData["Title"]</h1>
+
+
+    <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+        <br />
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Input.Email" class="col-form-label"></label>
+            </div>
+            <div class="col-7">
                 <input asp-for="Input.Email" class="form-control" />
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Input.Password"></label>
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Input.Password" class="col-form-label"></label>
+            </div>
+            <div class="col-7">
                 <input asp-for="Input.Password" class="form-control" />
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Input.ConfirmPassword"></label>
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Input.ConfirmPassword" class="col-form-label"></label>
+            </div>
+            <div class="col-7">
                 <input asp-for="Input.ConfirmPassword" class="form-control" />
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Input.FirstName"></label>
+            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Input.FirstName" class="col-form-label"></label>
+            </div>
+            <div class="col-7">
                 <input asp-for="Input.FirstName" class="form-control" />
-                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Input.LastName"></label>
+            <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Input.LastName" class="col-form-label"></label>
+            </div>
+            <div class="col-7">
                 <input asp-for="Input.LastName" class="form-control" />
-                <span asp-validation-for="Input.LastName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Input.Stanowisko"></label>
+            <span asp-validation-for="Input.LastName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Input.Stanowisko" class="col-form-label"></label>
+            </div>
+            <div class="col-7">
                 <input asp-for="Input.Stanowisko" class="form-control" />
-                <span asp-validation-for="Input.Stanowisko" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Input.Uprawnienia"></label>
+            <span asp-validation-for="Input.Stanowisko" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Input.Uprawnienia" class="col-form-label"></label>
+            </div>
+            <div class="col-7">
                 <input asp-for="Input.Uprawnienia" class="form-control" />
-                <span asp-validation-for="Input.Uprawnienia" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Input.PhoneNumber"></label>
+            <span asp-validation-for="Input.Uprawnienia" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Input.PhoneNumber" class="col-form-label"></label>
+            </div>
+            <div class="col-7">
                 <input asp-for="Input.PhoneNumber" class="form-control" />
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Dodaj</button>
-        </form>
-    </div>
+            <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+        </div>
+        <button style="width:70%; margin-left:100px;" class="btn btn-primary">Dodaj</button>
+    </form>
 </div>
 
 @section Scripts {
