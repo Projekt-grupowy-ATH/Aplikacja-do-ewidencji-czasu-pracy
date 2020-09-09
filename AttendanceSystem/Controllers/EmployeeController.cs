@@ -75,6 +75,10 @@ namespace AttendanceSystem.Controllers
 
 
         }
+        public IActionResult Project()
+        {
+            return View();
+        }
 
     }
 }
