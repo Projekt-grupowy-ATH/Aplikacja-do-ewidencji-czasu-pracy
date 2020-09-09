@@ -12,7 +12,7 @@ namespace AttendanceSystem.Models
 
         public int Idprojektu { get; set; }
         public string NazwaProjektu { get; set; }
-        public int? Idpracownika { get; set; }
+        public int Idpracownika { get; set; }
 
         public virtual Pracownik IdpracownikaNavigation { get; set; }
         public virtual ICollection<Zadanie> Zadanie { get; set; }
