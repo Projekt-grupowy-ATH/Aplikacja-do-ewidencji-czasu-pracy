@@ -19,7 +19,7 @@ using AttendanceSystem.Controllers;
 
 namespace AttendanceSystem.Areas.Identity.Pages.Account
 {
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<AttendanceSystemUser> _signInManager;
@@ -27,6 +27,7 @@ namespace AttendanceSystem.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         //private readonly IEmailSender _emailSender;
 
+        
         public RegisterModel(
             UserManager<AttendanceSystemUser> userManager,
             SignInManager<AttendanceSystemUser> signInManager,
@@ -89,13 +90,11 @@ namespace AttendanceSystem.Areas.Identity.Pages.Account
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
         }
-
         public async Task OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
-
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");

@@ -55,7 +55,7 @@ namespace AttendanceSystem
             services.ConfigureApplicationCookie(options =>
             {
                 options.Cookie.HttpOnly = true;
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
                 options.LoginPath = "/Identity/Account/Login"; 
                 options.LogoutPath = "/Identity/Account/Logout"; 
                 options.AccessDeniedPath = "/Identity/Account/AccessDenied"; 

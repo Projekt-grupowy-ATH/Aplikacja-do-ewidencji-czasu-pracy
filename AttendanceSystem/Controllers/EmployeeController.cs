@@ -14,18 +14,19 @@ namespace AttendanceSystem.Controllers
     public class EmployeeController : Controller
     {
        
-        [AllowAnonymous]
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             return View();
         }
-       
+       [Authorize(Roles = "Admin")]
         public IActionResult CreateNew()
         {
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateNew(Pracownik pracownik)
         {
 
@@ -36,6 +37,7 @@ namespace AttendanceSystem.Controllers
 
 
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult AllUsers()
         {
             //if valid
