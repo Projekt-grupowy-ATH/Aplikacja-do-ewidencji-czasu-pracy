@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AttendanceSystem.Areas.Identity.Data;
 using AttendanceSystem.Models;
+using AttendanceSystem.Models.DB;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,7 +37,9 @@ namespace AttendanceSystem
                      pageName: "/Account/Login",
                      route: "");
              });
-             
+            services.AddTransient<DBGetQuerrys>();
+            services.AddTransient<DBCreateQuerrys>();
+
             services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();
             // DB connection

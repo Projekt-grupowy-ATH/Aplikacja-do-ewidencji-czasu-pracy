@@ -42,7 +42,7 @@ namespace AttendanceSystem.Controllers
         public IActionResult CreateNew(Pracownik pracownik)
         {
             //if valid
-            _connection.AddNewEmployee(pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Email, pracownik.Telefon);
+            _connectionADD.AddNewEmployee(pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Email, pracownik.Telefon);
            // return RedirectToAction("AttendanceSystem", "Home");
             return RedirectToPage("/Home/AttendanceSystem");
         }
@@ -50,8 +50,7 @@ namespace AttendanceSystem.Controllers
         public IActionResult AllUsers()
         {
             //if valid
-            DBGetQuerrys db = new DBGetQuerrys();
-            var empList = db.ShowUsersList();
+            var empList = _connectionGET.ShowUsersList();
             return View(empList);
         }
 
