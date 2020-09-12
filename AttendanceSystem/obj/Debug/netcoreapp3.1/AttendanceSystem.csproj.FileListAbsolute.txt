@@ -2075,3 +2075,4 @@ C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSy
 C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
 C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Edit.cshtml.g.cs
 C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_EditAndBackToListButton.cshtml.g.cs
+C:\Users\pawel\Documents\ASP.NET\Aplikacja-do-ewidencji-czasu-pracy\AttendanceSystem\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Delete.cshtml.g.cs

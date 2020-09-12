@@ -81,6 +81,31 @@ namespace AttendanceSystem.Controllers
 
 
         }
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var menuModel = _db.Pracownik
+                .FirstOrDefault(m => m.Idpracownika == id);
+            if (menuModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(menuModel);
+        }
+        // POST: Menu/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var menuModel = _db.Pracownik.Find(id);
+            _db.Pracownik.Remove(menuModel);
+            _db.SaveChanges();
+            return RedirectToAction(nameof(AllUsers));
+        }
     }
 }
