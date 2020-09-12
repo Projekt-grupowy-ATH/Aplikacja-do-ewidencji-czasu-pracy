@@ -15,12 +15,15 @@ namespace AttendanceSystem.Controllers
     {
 
         private readonly EwidencjaContext _db;
-        private readonly DBCreateQuerrys _connection;
+        private readonly DBCreateQuerrys _connectionADD;
+        private readonly DBGetQuerrys _connectionGET;
         public EmployeeController(EwidencjaContext db,
-            DBCreateQuerrys connection)
+            DBCreateQuerrys connectionADD,
+            DBGetQuerrys connectionGET)
         {
             _db = db;
-            _connection = connection;
+            _connectionADD = connectionADD;
+            _connectionGET = connectionGET;
         }
 
         public IActionResult Index()
