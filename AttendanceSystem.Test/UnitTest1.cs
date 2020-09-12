@@ -12,14 +12,23 @@ namespace AttendanceSystem.Test
     public class EmployeeControllerTest
     {
         [TestMethod]
-        public void EmployeControllerTest()
+        public void CreateNewTest()
         {
             EmployeeController controller = new EmployeeController();
             var resultCreateNew = controller.CreateNew() as ViewResult;
-            Assert.IsNotNull(resultCreateNew);
-
-
             
+            Assert.IsNotNull(resultCreateNew);
+            Assert.IsInstanceOfType(resultCreateNew, typeof(ViewResult));
         }
+        [TestMethod]
+        public void IndexTetst()
+        {
+            EmployeeController controller = new EmployeeController();
+            var result = controller.Index() as ViewResult;
+            Assert.IsNotNull(result);
+            Assert.IsInstanceOfType(result, typeof(ViewResult));
+        }
+
+
     }
 }
