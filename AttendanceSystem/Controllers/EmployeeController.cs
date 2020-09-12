@@ -131,5 +131,28 @@ namespace AttendanceSystem.Controllers
         {
             return _db.Pracownik.Any(e => e.Idpracownika == id);
         }
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult CreateNewProject()
+        {
+            DBGetQuerrys db = new DBGetQuerrys();
+            ProjectViewModel model = new ProjectViewModel()
+            {
+                
+                Pracownicy = db.ShowUsersList(),
+                NewProjekt = new Projekt()
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
+        public IActionResult CreateNewProject(ProjectViewModel model)
+        {
+            _db.Projekt.Add(model.NewProjekt);
+            _db.SaveChanges();
+            return RedirectToAction("AttendanceSystem", "Home");
+        }
     }
 }
