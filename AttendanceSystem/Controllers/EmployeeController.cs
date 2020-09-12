@@ -53,34 +53,87 @@ namespace AttendanceSystem.Controllers
             return View(empList);
         }
 
+        //public IActionResult Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+
+        //    }
+
+        //    var employee = _db.Pracownik.Where(s => s.Idpracownika == id);
+        //    if (employee == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(employee);
+
+        //}
+        // GET: Menu/Edit/5
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
-
             }
 
-            var employee = _db.Pracownik.Where(s => s.Idpracownika == id);
-            if (employee == null)
+            var pracownik = _db.Pracownik.Find(id);
+            if (pracownik == null)
             {
                 return NotFound();
             }
-            return View(employee);
-
+            return View(pracownik);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Pracownik pracownik, int id)
+        [Authorize(Roles = "Admin")]
+        public IActionResult Edit(int id, [Bind("Id,Imie,Nazwisko,Stanowisko,Uprawnienia,Telefon")] Pracownik pracownik)
         {
+            //int idP = pracownik.Idpracownika;
+            //if (id != idP)
+            //{
+            //    return NotFound();
+            //}
 
-            DBUpdateQuerrys db = new DBUpdateQuerrys();
-            db.UpdateEpmloyeeData(id, pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Telefon, pracownik.Email);
-              
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    //_db.Update(pracownik);
+                    DBUpdateQuerrys db = new DBUpdateQuerrys();
+                    db.UpdateEpmloyeeData(id, pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Telefon);
+                    //_db.SaveChanges();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!PracownikModelExists(pracownik.Idpracownika))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                //return RedirectToAction(nameof(AllUsers));
+                return RedirectToAction("AllUsers", "Employee");
+            }
+            //return View(pracownik);
             return RedirectToAction("AllUsers", "Employee");
-
-
         }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult Edit(int id, Pracownik pracownik)
+        //{
+
+        //    DBUpdateQuerrys db = new DBUpdateQuerrys();
+        //    db.UpdateEpmloyeeData(id, pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Telefon);
+
+        //    return RedirectToAction("AllUsers", "Employee");
+
+
+        //}
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -106,6 +159,10 @@ namespace AttendanceSystem.Controllers
             _db.Pracownik.Remove(menuModel);
             _db.SaveChanges();
             return RedirectToAction(nameof(AllUsers));
+        }
+        private bool PracownikModelExists(int id)
+        {
+            return _db.Pracownik.Any(e => e.Idpracownika == id);
         }
     }
 }
