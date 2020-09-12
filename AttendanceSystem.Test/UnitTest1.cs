@@ -11,10 +11,16 @@ namespace AttendanceSystem.Test
     [TestClass]
     public class EmployeeControllerTest
     {
+        public EmployeeControllerTest()
+        {
+        }
+
         [TestMethod]
         public void CreateNewTest()
         {
-            EmployeeController controller = new EmployeeController();
+            var DBContextTest = new Mock<EwidencjaContext>();
+            
+            EmployeeController controller = new EmployeeController(DBContextTest.Object);
             var resultCreateNew = controller.CreateNew() as ViewResult;
             
             Assert.IsNotNull(resultCreateNew);
@@ -23,7 +29,8 @@ namespace AttendanceSystem.Test
         [TestMethod]
         public void IndexTetst()
         {
-            EmployeeController controller = new EmployeeController();
+            var DBContextTest = new Mock<EwidencjaContext>();
+            EmployeeController controller = new EmployeeController(DBContextTest.Object);
             var result = controller.Index() as ViewResult;
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result, typeof(ViewResult));
