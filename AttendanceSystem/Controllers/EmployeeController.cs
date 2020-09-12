@@ -36,13 +36,10 @@ namespace AttendanceSystem.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult CreateNew(Pracownik pracownik)
         {
-
             //if valid
             DBCreateQuerrys db = new DBCreateQuerrys();
             db.AddNewEmployee(pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Email, pracownik.Telefon);
             return RedirectToAction("AttendanceSystem", "Home");
-
-
         }
         [Authorize(Roles = "Admin")]
         public IActionResult AllUsers()
