@@ -53,22 +53,7 @@ namespace AttendanceSystem.Controllers
             return View(empList);
         }
 
-        //public IActionResult Edit(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
 
-        //    }
-
-        //    var employee = _db.Pracownik.Where(s => s.Idpracownika == id);
-        //    if (employee == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(employee);
-
-        //}
         // GET: Menu/Edit/5
         [Authorize(Roles = "Admin")]
         public IActionResult Edit(int? id)
@@ -90,20 +75,13 @@ namespace AttendanceSystem.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult Edit(int id, [Bind("Id,Imie,Nazwisko,Stanowisko,Uprawnienia,Telefon")] Pracownik pracownik)
         {
-            //int idP = pracownik.Idpracownika;
-            //if (id != idP)
-            //{
-            //    return NotFound();
-            //}
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    //_db.Update(pracownik);
                     DBUpdateQuerrys db = new DBUpdateQuerrys();
                     db.UpdateEpmloyeeData(id, pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Telefon);
-                    //_db.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -116,24 +94,12 @@ namespace AttendanceSystem.Controllers
                         throw;
                     }
                 }
-                //return RedirectToAction(nameof(AllUsers));
                 return RedirectToAction("AllUsers", "Employee");
             }
-            //return View(pracownik);
             return RedirectToAction("AllUsers", "Employee");
         }
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Edit(int id, Pracownik pracownik)
-        //{
 
-        //    DBUpdateQuerrys db = new DBUpdateQuerrys();
-        //    db.UpdateEpmloyeeData(id, pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Telefon);
-
-        //    return RedirectToAction("AllUsers", "Employee");
-
-
-        //}
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -153,6 +119,7 @@ namespace AttendanceSystem.Controllers
         // POST: Menu/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteConfirmed(int id)
         {
             var menuModel = _db.Pracownik.Find(id);
