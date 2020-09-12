@@ -15,7 +15,6 @@ namespace AttendanceSystem.Test
         public EmployeeControllerTest()
         {
            _connection  = new Mock<EwidencjaContext>();
-
         }
         [TestMethod]
         public void CreateNewTest()
