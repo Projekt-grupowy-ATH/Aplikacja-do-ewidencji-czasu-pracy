@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AttendanceSystem.Models;
 using AttendanceSystem.Models.DB;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -12,23 +13,27 @@ namespace AttendanceSystem.Controllers
 {
     public class EmployeeController : Controller
     {
+
         private readonly EwidencjaContext _db;
         public EmployeeController(EwidencjaContext db)
         {
             _db = db;
         }
 
+
         public IActionResult Index()
         {
             return View();
         }
 
+       [Authorize(Roles = "Admin")]
         public IActionResult CreateNew()
         {
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateNew(Pracownik pracownik)
         {
 
@@ -39,6 +44,7 @@ namespace AttendanceSystem.Controllers
 
 
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult AllUsers()
         {
             //if valid
