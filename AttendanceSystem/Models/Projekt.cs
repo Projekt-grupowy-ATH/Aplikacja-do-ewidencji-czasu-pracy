@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace AttendanceSystem.Models
 {
@@ -11,6 +12,7 @@ namespace AttendanceSystem.Models
         }
 
         public int Idprojektu { get; set; }
+        [Display(Name = "Nazwa projektu")]
         public string NazwaProjektu { get; set; }
         public int? Idpracownika { get; set; }
 

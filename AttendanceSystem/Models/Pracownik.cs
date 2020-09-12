@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace AttendanceSystem.Models
 {
@@ -9,7 +10,7 @@ namespace AttendanceSystem.Models
         {
             Projekt = new HashSet<Projekt>();
         }
-
+        
         public int Idpracownika { get; set; }
         public string Imie { get; set; }
         public string Nazwisko { get; set; }
