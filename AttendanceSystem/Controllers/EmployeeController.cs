@@ -15,9 +15,12 @@ namespace AttendanceSystem.Controllers
     {
 
         private readonly EwidencjaContext _db;
-        public EmployeeController(EwidencjaContext db)
+        private readonly DBCreateQuerrys _connection;
+        public EmployeeController(EwidencjaContext db,
+            DBCreateQuerrys connection)
         {
             _db = db;
+            _connection = connection;
         }
 
         public IActionResult Index()
@@ -36,9 +39,9 @@ namespace AttendanceSystem.Controllers
         public IActionResult CreateNew(Pracownik pracownik)
         {
             //if valid
-            DBCreateQuerrys db = new DBCreateQuerrys();
-            db.AddNewEmployee(pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Email, pracownik.Telefon);
-            return RedirectToAction("AttendanceSystem", "Home");
+            _connection.AddNewEmployee(pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Email, pracownik.Telefon);
+           // return RedirectToAction("AttendanceSystem", "Home");
+            return RedirectToPage("/Home/AttendanceSystem");
         }
         [Authorize(Roles = "Admin")]
         public IActionResult AllUsers()
