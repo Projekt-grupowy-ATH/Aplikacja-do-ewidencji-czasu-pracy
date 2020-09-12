@@ -53,34 +53,83 @@ namespace AttendanceSystem.Controllers
             return View(empList);
         }
 
+
+        // GET: Menu/Edit/5
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
-
             }
 
-            var employee = _db.Pracownik.Where(s => s.Idpracownika == id);
-            if (employee == null)
+            var pracownik = _db.Pracownik.Find(id);
+            if (pracownik == null)
             {
                 return NotFound();
             }
-            return View(employee);
-
+            return View(pracownik);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Pracownik pracownik, int id)
+        [Authorize(Roles = "Admin")]
+        public IActionResult Edit(int id, [Bind("Id,Imie,Nazwisko,Stanowisko,Uprawnienia,Telefon")] Pracownik pracownik)
         {
 
-            DBUpdateQuerrys db = new DBUpdateQuerrys();
-            db.UpdateEpmloyeeData(id, pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Telefon, pracownik.Email);
-              
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    DBUpdateQuerrys db = new DBUpdateQuerrys();
+                    db.UpdateEpmloyeeData(id, pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Telefon);
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!PracownikModelExists(pracownik.Idpracownika))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("AllUsers", "Employee");
+            }
             return RedirectToAction("AllUsers", "Employee");
-
-
         }
 
+        [Authorize(Roles = "Admin")]
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var menuModel = _db.Pracownik
+                .FirstOrDefault(m => m.Idpracownika == id);
+            if (menuModel == null)
+            {
+                return NotFound();
+            }
+
+            return View(menuModel);
+        }
+        // POST: Menu/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var menuModel = _db.Pracownik.Find(id);
+            _db.Pracownik.Remove(menuModel);
+            _db.SaveChanges();
+            return RedirectToAction(nameof(AllUsers));
+        }
+        private bool PracownikModelExists(int id)
+        {
+            return _db.Pracownik.Any(e => e.Idpracownika == id);
+        }
     }
 }
