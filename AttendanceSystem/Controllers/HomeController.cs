@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AttendanceSystem.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AttendanceSystem.Controllers
 {
@@ -18,21 +19,24 @@ namespace AttendanceSystem.Controllers
             _logger = logger;
         }
 
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Index()
         {
             return View();
         }
-
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Privacy()
         {
             return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        [Authorize(Roles = "User,Admin")]
         public IActionResult AttendanceSystem()
         {
             return View();

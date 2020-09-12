@@ -14,7 +14,7 @@ namespace AttendanceSystem.Models
             _connection = new EwidencjaContext(); 
         }
 
-        public void UpdateEpmloyeeData(int Id, string name, string surname, string job, string permission, int phoneNumber)
+        public void UpdateEpmloyeeData(int Id, string name, string surname, string job, string permission, int? phoneNumber)
         {
             List <Pracownik> CurrentSettings = new List<Pracownik>();
 
@@ -24,7 +24,8 @@ namespace AttendanceSystem.Models
                 Nazwisko = s.Nazwisko,
                 Stanowisko = s.Stanowisko,
                 Uprawnienia = s.Uprawnienia,
-                Telefon = s.Telefon
+                Telefon = s.Telefon,
+                Email = s.Email
             }).ToList();
 
             CurrentSettings.ForEach(s =>
@@ -34,6 +35,7 @@ namespace AttendanceSystem.Models
                 s.Stanowisko = job;
                 s.Uprawnienia = permission;
                 s.Telefon = phoneNumber;
+                s.Email = s.Email;
             });
 
             _connection.UpdateRange(CurrentSettings);
