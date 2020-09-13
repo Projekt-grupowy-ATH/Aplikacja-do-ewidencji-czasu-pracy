@@ -45,7 +45,9 @@ namespace AttendanceSystem.Controllers
             //if valid
             _connectionADD.AddNewEmployee(pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko,
                 pracownik.Uprawnienia, pracownik.Email, pracownik.Telefon);
-            return RedirectToPage("/Home/AttendanceSystem");
+
+           // return RedirectToPage("/Home/AttendanceSystem");
+            return RedirectToAction("AttendanceSystem", "Home");
         }
         [Authorize(Roles = "Admin")]
         public IActionResult AllUsers()
