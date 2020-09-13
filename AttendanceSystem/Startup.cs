@@ -92,8 +92,7 @@ namespace AttendanceSystem
                 endpoints.MapControllerRoute(
                     name: "default",
                     //pattern: "{controller=Home}/{action=Index}/{id?}");
-                    pattern: "{controller=Home}/{action=AttendanceSystem}/{id?}");
-                    //pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Employee}/{action=AttendanceSystem}/{id?}");
                 endpoints.MapRazorPages();
             });
             CreateUserRoles(serviceProvider).Wait();
