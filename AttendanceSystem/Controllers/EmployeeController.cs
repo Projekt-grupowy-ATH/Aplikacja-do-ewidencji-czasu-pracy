@@ -17,6 +17,7 @@ namespace AttendanceSystem.Controllers
         private readonly EwidencjaContext _db;
         private readonly DBCreateQuerrys _connectionADD;
         private readonly DBGetQuerrys _connectionGET;
+
         public EmployeeController(EwidencjaContext db,
             DBCreateQuerrys connectionADD,
             DBGetQuerrys connectionGET)
@@ -42,8 +43,8 @@ namespace AttendanceSystem.Controllers
         public IActionResult CreateNew(Pracownik pracownik)
         {
             //if valid
-            _connectionADD.AddNewEmployee(pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko, pracownik.Uprawnienia, pracownik.Email, pracownik.Telefon);
-           // return RedirectToAction("AttendanceSystem", "Home");
+            _connectionADD.AddNewEmployee(pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko,
+                pracownik.Uprawnienia, pracownik.Email, pracownik.Telefon);
             return RedirectToPage("/Home/AttendanceSystem");
         }
         [Authorize(Roles = "Admin")]
