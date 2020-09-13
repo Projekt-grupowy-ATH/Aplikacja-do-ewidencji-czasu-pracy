@@ -46,7 +46,6 @@ namespace AttendanceSystem.Controllers
             _connectionADD.AddNewEmployee(pracownik.Imie, pracownik.Nazwisko, pracownik.Stanowisko,
                 pracownik.Uprawnienia, pracownik.Email, pracownik.Telefon);
 
-           // return RedirectToPage("/Home/AttendanceSystem");
             return RedirectToAction("AttendanceSystem", "Home");
         }
         [Authorize(Roles = "Admin")]
@@ -139,11 +138,10 @@ namespace AttendanceSystem.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult CreateNewProject()
         {
-            DBGetQuerrys db = new DBGetQuerrys();
             ProjectViewModel model = new ProjectViewModel()
             {
                 
-                Pracownicy = db.ShowUsersList(),
+                Pracownicy = _connectionGET.ShowUsersList(),
                 NewProjekt = new Projekt()
             };
 
