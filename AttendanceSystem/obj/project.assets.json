@@ -8892,24 +8892,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\M6800\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\pawel\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\M6800\\source\\proj\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
+      "projectUniqueName": "C:\\Users\\pawel\\Documents\\ASP.NET\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
       "projectName": "AttendanceSystem",
-      "projectPath": "C:\\Users\\M6800\\source\\proj\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
-      "packagesPath": "C:\\Users\\M6800\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\M6800\\source\\proj\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\obj\\",
+      "projectPath": "C:\\Users\\pawel\\Documents\\ASP.NET\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\AttendanceSystem.csproj",
+      "packagesPath": "C:\\Users\\pawel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pawel\\Documents\\ASP.NET\\Aplikacja-do-ewidencji-czasu-pracy\\AttendanceSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\M6800\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\pawel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

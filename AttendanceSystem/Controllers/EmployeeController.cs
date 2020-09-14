@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AttendanceSystem.Models;
 using AttendanceSystem.Models.DB;
+using AttendanceSystem.Models.Properties;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -155,6 +156,37 @@ namespace AttendanceSystem.Controllers
             _db.Projekt.Add(model.NewProjekt);
             _db.SaveChanges();
             return RedirectToAction("AttendanceSystem", "Home");
+        }
+
+
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult CreateNewTask()
+        {
+            TaskViewModel task = new TaskViewModel()
+            {
+
+                Projekts = _connectionGET.ShowProjectsList(),
+                Zadanies = new Zadanie()
+            };
+
+            return View(task);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
+        public IActionResult CreateNewTask(TaskViewModel task)
+        {
+            _db.Zadanie.Add(task.Zadanies);
+            _db.SaveChanges();
+            return RedirectToAction("AttendanceSystem", "Home");
+        }
+        public IActionResult UserTask()
+        {
+            string user = User.Identity.Name;
+            DBGetQuerrys getOrder = new DBGetQuerrys();
+
+            return View(getOrder.ShowUserTask(user));
         }
     }
 }
